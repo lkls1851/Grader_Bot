@@ -6,7 +6,7 @@ nlp = spacy.load("en_core_web_sm")
 pd.set_option("display.max_rows", 200)
 
 
-content = "Trinamool Congress leader Mahua Moitra has moved the Supreme Court against her expulsion from the Lok Sabha over the cash-for-query allegations against her."
+content = "Congress leader from Ram Prasad has moved the Supreme Court against her  from the Lok Sabha over the cash-for-query allegations against ."
 
 doc = nlp(content)
 
