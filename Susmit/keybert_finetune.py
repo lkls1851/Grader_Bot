@@ -1,6 +1,6 @@
 from keybert import KeyBERT
 from keyphrase_vectorizers import KeyphraseCountVectorizer
-from preprocess import GetDataset
+from Susmit.preprocess import GetDataset
 
 kw_model = KeyBERT()
 
@@ -12,3 +12,5 @@ docs=[text]
 
 kw_model.extract_keywords(docs=docs, keyphrase_ngram_range=(1,1))
 print(kw_model.extract_keywords(docs=docs, vectorizer=KeyphraseCountVectorizer()))
+
+

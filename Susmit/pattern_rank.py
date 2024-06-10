@@ -1,5 +1,5 @@
 from keyphrase_vectorizers import KeyphraseCountVectorizer
-from preprocess import GetDataset
+from Susmit.preprocess import GetDataset
 
 path='Genre Classification Dataset/train_data.txt'
 dataset=GetDataset(path_to_data=path)

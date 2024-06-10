@@ -15,3 +15,10 @@ for ent in doc.ents:
 
 
 
+## Output
+'''
+Congress 0 8 ORG
+Ram Prasad 16 26 PERSON
+the Supreme Court 37 54 ORG
+the Lok Sabha 73 86 PERSON
+'''
