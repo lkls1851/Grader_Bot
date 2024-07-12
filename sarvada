@@ -1,0 +1,41 @@
+pip install yake
+# Importing libraries
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import yake
+
+# Initializing the YAKE instance
+yake_kw = yake.KeywordExtractor()
+
+# Input text
+input_text = '''
+Between 1995 and 2010, a study was conducted representing the percentages of
+people born in Australia, versus people born outside Australia, living in urban,
+ rural, and town. First, in 1995, cities represented the major percentage of
+  habitat by roughly 50 percent, followed by rural areas and towns came in last,
+   among people born in Australia. On the other hand, people born outside
+    Australia, cities showed the most percentages of 6o percent, followed by
+    rural areas and towns. In 2010, among people born in Australia, cities had
+     an increase more than 20 percent increase in the total representation and
+      a major decrease in towns and rural areas. Conversely, people born
+       outside Australia, cities had the most percentage among both studies,
+        followed by rural areas and towns.
+'''
+
+# Extracting keywords
+KeyWords = yake_kw.extract_keywords(input_text)
+
+# Displaying the keywords
+print(KeyWords)
+
+# Extracting keywords
+keywords = [kw for kw, _ in KeyWords]
+
+# Generate WordCloud
+wordcloud = WordCloud().generate(' '.join(keywords))
+
+# Display the WordCloud
+plt.figure(figsize=(10, 10))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
